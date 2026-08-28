@@ -21,7 +21,7 @@ public class UserService {
         return userGenerationsRepo.getCreationsByUsername(username);
 
     }
-
+    @Transactional(readOnly = true)
     public List<UserGenerations> getPublishedCreations(String username) {
         return userGenerationsRepo.getPublishedCreations(username);
     }
